@@ -1,0 +1,24 @@
+É necessário executar os comandos da sequelize-cli para fazer alterações no banco.
+
+---------------------------------------------------------------------------------------------------------
+
+> $  npx sequelize-cli init //--------------// Inicia o Sequelize CLI, deve ser executado na root do src, porque vai criar as pastas config, models, seeders e migrations
+
+---------------------------------------------------------------------------------------------------------
+
+> $  npx sequelize-cli db:create //--------------// Cria o banco de dados
+
+> $  npx sequelize-cli
+            model:generate 
+            --name 
+                User 
+            --attributes 
+                firstName:string,
+                email:string,
+                password:string //--------------// Gera um novo Model e Migration
+
+> $  npx sequelize-cli migration:generate --name name-migration //--------------// Cria uma nova Migration
+
+> $  npx sequelize-cli db:migrate //--------------// Executa as migrations para atualizar o banco de dados
+
+> $  npx sequelize-cli db:migrate:undo //--------------// Desfaz a ultima migration feita no banco de dados

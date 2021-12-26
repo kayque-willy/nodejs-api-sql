@@ -2,15 +2,19 @@
 
 > $  npm install express //--------------// Instalação do Express
 
-> $  npm install -d nodemon //--------------// Instalação do Nodemon como modulo de desenvolvimento
+> $  npm install nodemon -D //--------------// Instalação do Nodemon como modulo de desenvolvimento
 
 > $  npm install cors //--------------// Instalação do Cors
 
-> $  npm install morgan //--------------// Instalação do Morgan 
+> $  npm install morgan //--------------// Instalação do Morgan -h
 
-> $  npm install jsonwebtoken //--------------// Instalação do Json Web Token 
+> $  npm install sequelize //--------------// Instalação do ORM Sequelize
 
-> $  npm install mongoose //--------------// Instalação do gerenciador do banco de dados MongoDB
+> $  npm install sequelize-cli -D //--------------// Instalação do CLI do Sequelize
+
+> $  npm install pg //--------------// Instalação do gerenciador do banco de dados Postgres
+
+> $  npm install pg-hstore //--------------// Instalação do gerenciador do banco de dados Postgres
 
 ---------------------------------------------------------------------------------------------------------
 
