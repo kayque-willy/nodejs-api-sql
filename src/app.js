@@ -3,7 +3,7 @@ const cors = require("cors");
 const morgan = require('morgan');
 const routes = require("./routes");
 //Conexão com o PostgreSQL
-require('./app/database/Connection');
+require('./app/config/Connection');
 
 class App {
 
