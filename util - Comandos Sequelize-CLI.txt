@@ -8,17 +8,17 @@
 
 > $  npx sequelize-cli db:create //--------------// Cria o banco de dados
 
-> $  npx sequelize-cli
+> $ npx sequelize-cli
             model:generate 
-            --name 
-                User 
-            --attributes 
-                firstName:string,
-                email:string,
-                password:string //--------------// Gera um novo Model e Migration
+                --name 
+                    User 
+                --attributes 
+                    firstName:string,email:string,password:string //--------------// Gera um novo Model e Migration, os argumentos dos atributos não podem ter espaço entre as vírgulas
 
 > $  npx sequelize-cli migration:generate --name name-migration //--------------// Cria uma nova Migration
 
 > $  npx sequelize-cli db:migrate //--------------// Executa as migrations para atualizar o banco de dados
 
 > $  npx sequelize-cli db:migrate:undo //--------------// Desfaz a ultima migration feita no banco de dados
+
+ npx sequelize-cli model:generate --name Address --attributes zipcode:string,street:string,number:integer,user_id:integer
