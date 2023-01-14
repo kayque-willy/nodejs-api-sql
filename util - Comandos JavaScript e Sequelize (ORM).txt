@@ -1,0 +1,62 @@
+---------------------------------------------INSTALAÇÃO--------------------------------------------------
+
+> $  npm install express //--------------// Instalação do Express
+
+> $  npm install nodemon -D //--------------// Instalação do Nodemon como modulo de desenvolvimento
+
+> $  npm install cors //--------------// Instalação do Cors
+
+> $  npm install morgan //--------------// Instalação do Morgan -h
+
+> $  npm install sequelize //--------------// Instalação do ORM Sequelize
+
+> $  npm install sequelize-cli -D //--------------// Instalação do CLI do Sequelize
+
+> $  npm install pg //--------------// Instalação do gerenciador do banco de dados Postgres
+
+> $  npm install pg-hstore //--------------// Instalação do gerenciador do banco de dados Postgres
+
+------------------------------------------CRIAÇÃO PROJETO-------------------------------------------------
+
+> $  npm init -y //--------------// Criação de um novo projeto node.js
+
+--------------------------------------------SEQUELIZE (ORM)------------------------------------------------
+
+> $  npx sequelize-cli init //--------------// (Obrigatório) Inicia o Sequelize CLI, deve ser executado na root do src, porque vai criar as pastas config, models, seeders e migrations
+
+-----------------------------------SEQUELIZE (ORM) - MIGRATIONS E MODELS------------------------------------
+
+> $  npx sequelize-cli db:create //--------------// Cria o banco de dados
+
+> $ npx sequelize-cli 
+            model:generate 
+            --name Address 
+            --attributes zipcode:string,street:string,number:integer,user_id:integer //--------------// Gera um novo Model e Migration, os argumentos dos atributos não podem ter espaço entre as vírgulas
+
+> $  npx sequelize-cli migration:generate --name name-migration //--------------// Cria uma nova Migration
+
+> $  npx sequelize-cli db:migrate //--------------// Executa as migrations para atualizar o banco de dados
+
+> $  npx sequelize-cli db:migrate:undo //--------------// Desfaz a ultima migration feita no banco de dados
+
+ > $ npx sequelize-cli model:generate --name Address --attributes zipcode:string,street:string,number:integer,user_id:integer
+
+--------------------------------------------------EXECUÇÃO---------------------------------------------------
+
+> $  npm run dev //--------------// Executa o projeto em desenvolvimento, executa o script "> $ nodemon src/index.js" no packge.json
+
+> $  npm run start //--------------// Executa o projeto em produção, executa o script "> $ node src/index.js" no packge.json
+
+------------------------------------------------ IMPORTANTE ------------------------------------------------
+
+Criar o arquivo jsconfi.json na raíz do diretório:
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es6",
+        "module": "commonjs"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
